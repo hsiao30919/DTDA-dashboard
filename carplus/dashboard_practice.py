@@ -9,9 +9,9 @@ st.set_page_config(page_title="我的儀表板", layout="wide")
 st.title("🚲 我的共享單車分析")
 
 # ── 載入資料 ──────────────────────────────────────────────────
-DATA_DIR = pathlib.Path(__file__).resolve().parent / "data"
+
 orders = pd.read_csv(
-    str(DATA_DIR / "orders.csv"),
+     "./orders.csv"),
     parse_dates=["rent_start_dt"],
 )
 orders["month"] = orders["rent_start_dt"].dt.to_period("M").astype(str)
