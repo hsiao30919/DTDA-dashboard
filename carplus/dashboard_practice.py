@@ -16,10 +16,10 @@ orders = pd.read_csv(
 orders["month"] = orders["rent_start_dt"].dt.to_period("M").astype(str)
 orders["date"] = orders["rent_start_dt"].dt.normalize()
 
-station_df = pd.read_csv(DATA_DIR / "irent.csv")
-parking_df = pd.read_csv(DATA_DIR / "parking_lots.csv")
-available_cars = pd.read_csv(DATA_DIR / "available_cars.csv", parse_dates=["available_date"])
-map_browsing = pd.read_csv(DATA_DIR / "map_browsing.csv", parse_dates=["click_date"])
+station_df = pd.read_csv("./data/irent.csv")
+parking_df = pd.read_csv("./data/parking_lots.csv")
+# available_cars = pd.read_csv("./data/available_cars.csv", parse_dates=["available_date"])
+map_browsing = pd.read_csv("./data/map_browsing.csv", parse_dates=["click_date"])
 
 # ── 建立 Tab ──────────────────────────────────────────────────
 tab1, tab2, tab3 = st.tabs(["📊 總覽", "🗺️ 站點地圖", "📈 需求分析"])
