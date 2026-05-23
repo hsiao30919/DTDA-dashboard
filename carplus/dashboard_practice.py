@@ -10,7 +10,7 @@ st.title("🚲 我的共享單車分析")
 
 # ── 載入資料 ──────────────────────────────────────────────────
 orders = pd.read_csv(
-    "./orders.csv",
+    "./data/orders.csv",
     parse_dates=["rent_start_dt"],
 )
 orders["month"] = orders["rent_start_dt"].dt.to_period("M").astype(str)
