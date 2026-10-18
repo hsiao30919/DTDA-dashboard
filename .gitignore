@@ -1,0 +1,6 @@
+
+# Private company datasets
+carplus/data/*.csv
+
+# macOS metadata
+.DS_Store
